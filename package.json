@@ -4,7 +4,8 @@
   "description": "The GiftHub is a central repository for users to store and share their wishlists.",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d lib",
+    "build": "rm -rf lib && babel --watch -d lib ./app.js src && cp -r src/views lib",
+    "start": "rm -rf lib && mkdir lib && babel ./app.js src --watch --outfile --source-maps --out-file lib/app.js && cd lib && node app.js && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
