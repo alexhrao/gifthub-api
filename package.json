@@ -4,6 +4,7 @@
   "description": "The GiftHub is a central repository for users to store and share their wishlists.",
   "main": "index.js",
   "scripts": {
+    "build": "babel src -d lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/alexhrao/gifthub-api/issues"
   },
-  "homepage": "https://github.com/alexhrao/gifthub-api#readme"
+  "homepage": "https://github.com/alexhrao/gifthub-api#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3"
+  }
 }
