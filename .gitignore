@@ -81,3 +81,9 @@ typings/
 
 # Output
 lib/
+
+# Miscellaneous
+*.swp
+*.log
+*.tmp
+tmp/
