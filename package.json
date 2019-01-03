@@ -4,8 +4,8 @@
   "description": "The GiftHub is a central repository for users to store and share their wishlists.",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf lib && babel --watch -d lib ./app.js src && cp -r src/views lib",
-    "start": "rm -rf lib && mkdir lib && babel ./app.js src --watch --outfile --source-maps --out-file lib/app.js && cd lib && node app.js && cd ..",
+    "build": "npm install && babel src --out-dir lib --copy-files --delete-dir-on-start --minified --source-map",
+    "start": "cd src && npx babel-watch --watch views app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +23,7 @@
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
+    "babel-watch": "git+https://github.com/monathur/babel-watch.git",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
     "rimraf": "^2.6.3",
